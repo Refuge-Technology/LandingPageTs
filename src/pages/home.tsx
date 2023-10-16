@@ -8,7 +8,7 @@ const Home = () => {
 				<div className="mx-auto max-w-2xl py-8 sm:py-48 lg:py-56">
 					<div className="flex flex-col text-center gap-4 leading-3">
 						<h1 className=" flex flex-col gap-2 items-center text-2xl tracking-tight text-white sm:text-6xl">
-							Hacking For
+							Coding For
 							<span className="w-min text-white bg-secondary italic px-1">
 								Humanity
 							</span>

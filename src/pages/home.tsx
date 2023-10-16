@@ -2,19 +2,19 @@ import { HeroBackground } from "../assets/svg/humanitythrucode.svg";
 
 const Home = () => {
 	return (
-		<div className=" relative bg-background">
-			<div className="relative isolate overflow-hidden pt-14">
+		<div className="relative bg-background">
+			<div className="relative overflow-hidden isolate pt-14">
 				<HeroBackground />
-				<div className="mx-auto max-w-2xl py-8 sm:py-48 lg:py-56">
-					<div className="flex flex-col text-center gap-4 leading-3">
-						<h1 className=" flex flex-col gap-2 items-center text-2xl tracking-tight text-white sm:text-6xl">
+				<div className="max-w-2xl py-8 mx-auto sm:py-48 lg:py-56">
+					<div className="flex flex-col gap-4 leading-3 text-center">
+						<h1 className="flex flex-col items-center gap-2 text-2xl tracking-tight text-white sm:text-6xl">
 							Coding For
-							<span className="w-min text-white bg-secondary italic px-1">
+							<span className="pb-2 pr-3 italic text-white rounded-sm w-min bg-secondary">
 								Humanity
 							</span>
 						</h1>
-						<div className="bg-background p-2 rounded-md">
-							<p className=" sm:mt-6 text-lg leading-8 text-white">
+						<div className="p-2 rounded-md bg-background">
+							<p className="text-lg leading-8 text-white sm:mt-6">
 								Refuge Technology is a group of hackers,
 								engineers, and open-source enthusiasts making
 								software to help our fellow humans in need.

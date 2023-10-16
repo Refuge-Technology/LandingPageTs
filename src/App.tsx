@@ -1,8 +1,8 @@
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
-import { HumanitarianOrgs } from "./components/humanitarianorgs";
-import { InternetBased } from "./components/internetbased";
-import { OpenSourced } from "./components/opensourced";
+import { HumanitarianOrgs } from "./pages/humanitarianorgs";
+import { InternetBased } from "./pages/internetbased";
+import { OpenSourced } from "./pages/opensourced";
 import { Home } from "./pages/home";
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
 			<Header />
 			<Home />
 			<InternetBased />
-			< OpenSourced />
-			< HumanitarianOrgs />
-			< Footer />
+			<OpenSourced />
+			<HumanitarianOrgs />
+			<Footer />
 			{/* <Footer /> */}
 		</div>
 	);

@@ -5,7 +5,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				"hero-pattern": "url('/src/assets/svg/images/decentralized.png')",
+				"hero-pattern": "url('/src/assets/images/decentralized.png')",
 				"hero-pattern2": "url('/src/assets/svg/un-icon.svg')",
 			},
 			fontFamily: {

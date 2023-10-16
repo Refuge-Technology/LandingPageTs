@@ -1,28 +1,8 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { DiscordIcon } from "../assets/svg/discord";
-import { GithubIcon } from "../assets/svg/github";
-import { XIcon } from "../assets/svg/x";
-
-const navigation = [
-	{ name: "Contact Us", href: "mailto:refuge_technology@proton.me" },
-];
-
-const socials = [
-	{
-		icon: <DiscordIcon className="fill-inherit" />,
-		href: "https://discord.gg/zggWamh8",
-	},
-	{
-		icon: <GithubIcon className="fill-inherit" />,
-		href: "https://github.com/Refuge-Technology",
-	},
-	{
-		icon: <XIcon className="fill-inherit" />,
-		href: "https://twitter.com/refuge_tech",
-	},
-];
+import { socials } from "../assets/data/links";
+import { navigation } from "../assets/data/links";
 
 const Header = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,14 +10,14 @@ const Header = () => {
 	return (
 		<header className="bg-background">
 			<nav
-				className="mx-auto flex max-w-full items-center justify-between p-6 lg:px-8"
+				className="flex items-center justify-between max-w-full p-6 mx-auto lg:px-8"
 				aria-label="Global"
 			>
 				<div className="flex lg:flex-1">
 					<a href="#" className="-m-1.5 p-1.5 text-white">
 						<span className="sr-only ">Refuge Technology</span>
 						<h1 className="text-3xl"> {"<🤍/>"}</h1>
-						<h3 className=" text-3xl pl-20 font-light text-secondary -mt-4 -ml-2 tracking-wider">
+						<h3 className="pl-20 -mt-4 -ml-2 text-3xl font-light tracking-wider text-secondary">
 							Refuge Technology
 						</h3>
 					</a>
@@ -49,29 +29,34 @@ const Header = () => {
 						onClick={() => setMobileMenuOpen(true)}
 					>
 						<span className="sr-only">Open main menu</span>
-						<Bars3Icon className="h-6 w-6 " aria-hidden="true" />
+						<Bars3Icon className="w-6 h-6 " aria-hidden="true" />
 					</button>
 				</div>
 				<div className="hidden lg:flex lg:gap-x-12">
-					{navigation.map((item) => (
-						<a
-							key={item.name}
-							href={item.href}
-							className="leading-6 text-links hover:text-primary transition-colors duration-200"
-						>
-							{item.name}
-						</a>
-					))}
+					{navigation.map((item) => {
+						return (
+							<a
+								key={item.name}
+								href={item.href}
+								className="leading-6 transition-colors duration-200 text-links hover:text-primary"
+							>
+								{item.name}
+							</a>
+						);
+					})}
 				</div>
-				<div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4 ">
-					{socials.map((item) => (
-						<a
-							href={item.href}
-							className="fill-links hover:fill-primary transition duration-200"
-						>
-							{item.icon}
-						</a>
-					))}
+				<div className="hidden gap-4 lg:flex text-links lg:flex-1 lg:justify-end ">
+					{socials.map((item) => {
+						return (
+							<a
+								key={item.name}
+								href={item.href}
+								className="transition duration-200 hover:text-primary"
+							>
+								<item.icon />
+							</a>
+						);
+					})}
 				</div>
 			</nav>
 			<Dialog
@@ -81,7 +66,7 @@ const Header = () => {
 				onClose={setMobileMenuOpen}
 			>
 				<div className="fixed inset-0 z-10" />
-				<Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+				<Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full px-6 py-6 overflow-y-auto bg-background sm:max-w-sm sm:ring-1 sm:ring-white/10">
 					<div className="flex items-center justify-between">
 						<a href="#" className="-m-1.5 p-1.5">
 							<span className="sr-only">Refuge Technology</span>
@@ -93,35 +78,40 @@ const Header = () => {
 							onClick={() => setMobileMenuOpen(false)}
 						>
 							<span className="sr-only">Close menu</span>
-							<XMarkIcon className="h-6 w-6" aria-hidden="true" />
+							<XMarkIcon className="w-6 h-6" aria-hidden="true" />
 						</button>
 					</div>
-					<div className="mt-6 flow-root">
+					<div className="flow-root mt-6">
 						<div className="-my-6 divide-y divide-gray-500/25">
-							<div className="space-y-2 py-6">
-								{navigation.map((item) => (
-									<a
-										key={item.name}
-										href={item.href}
-										className="-mx-3 block rounded-lg px-3 py-2 text-base  leading-7 text-white hover:bg-gray-800"
-									>
-										{item.name}
-									</a>
-								))}
+							<div className="py-6 space-y-2">
+								{navigation.map((item) => {
+									return (
+										<a
+											key={item.name}
+											href={item.href}
+											className="block px-3 py-2 -mx-3 text-base leading-7 text-white rounded-lg hover:bg-gray-800"
+										>
+											{item.name}
+										</a>
+									);
+								})}
 							</div>
 							<div className="py-6">
 								<a
 									href="#"
 									className="-mx-3 w-full justify-around rounded-lg px-3 py-2.5 text-base flex font-semibold leading-7 text-white fill-white"
 								>
-									{socials.map((item) => (
-										<a
-											href={item.href}
-											className=" w-min p-4 rounded-lg flex hover:bg-gray-800"
-										>
-											{item.icon}
-										</a>
-									))}
+									{socials.map((item) => {
+										return (
+											<a
+												key={item.name}
+												href={item.href}
+												className="flex p-4 rounded-lg w-min hover:bg-gray-800"
+											>
+												<item.icon />
+											</a>
+										);
+									})}
 								</a>
 							</div>
 						</div>

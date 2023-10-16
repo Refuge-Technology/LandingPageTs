@@ -6,10 +6,6 @@ import { GithubIcon } from "../assets/svg/github";
 import { XIcon } from "../assets/svg/x";
 
 const navigation = [
-	{
-		name: "Support Us",
-		href: "https://www.buymeacoffee.com/refugetechnology",
-	},
 	{ name: "Contact Us", href: "mailto:refuge_technology@proton.me" },
 ];
 

@@ -4,12 +4,16 @@ export default {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
 		extend: {
+			backgroundImage: {
+				"hero-pattern": "url('/src/assets/svg/images/decentralized.png')",
+				"hero-pattern2": "url('/src/assets/svg/un-icon.svg')",
+			},
 			fontFamily: {
 				sans: ["Montserrat", "sans-serif"],
 			},
 			colors: {
 				primary: "#DCDCDC",
-				secondary: "#65DC99",
+				secondary: "#BC13FE",
 				background: "#031623",
 				links: "#81869C",
 			},

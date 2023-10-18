@@ -18,7 +18,7 @@ const Footer = () => {
 				</div>
 				<div className="mt-8 md:order-1 md:mt-0">
 					<p className="text-xs leading-5 text-center text-gray-500">
-						&copy; 2023 Refuge Technology, Inc. All rights reserved.
+						&copy; 2023 Refuge Technology. All rights reserved.
 					</p>
 				</div>
 			</div>

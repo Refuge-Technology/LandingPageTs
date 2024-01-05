@@ -23,12 +23,6 @@ const InternetBased = () => {
 									terrorism, warfare, natural disasters, and
 									disease.
 								</p>
-								<p className="mt-6 text-lg leading-8 text-center text-white">
-									More information about our first
-									application, targeted toward helping
-									refugees find temporary housing, is coming
-									soon.
-								</p>
 							</div>
 						</div>
 					</div>

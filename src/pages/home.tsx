@@ -15,19 +15,16 @@ const Home = () => {
 						</h1>
 						<div className="p-2 rounded-md bg-background">
 							<p className="text-lg leading-8 text-white sm:mt-6">
-								Refuge Technology is a group of hackers,
+								Refuge Technology is a group of technologists,
 								engineers, and open-source enthusiasts making
 								software to help our fellow humans in need.
 							</p>
 							<p className="mt-6 text-lg leading-8 text-white">
-								We are currently building an application to
-								allow anyone to offer their homes to displaced
-								individuals in
-								<span className="italic"> Palestine</span>,
-								<span className="italic"> Israel</span>,
-								<span className="italic"> Morocco</span>,
-								<span className="italic"> Libya</span>, and
-								<span className="italic"> Afghanistan</span>.
+								We are currently building 
+								<i> <a href="https://shelter.refugetechnology.org/"> Take Refuge </a></i>  -
+								an application that
+								allows anyone to offer their homes to displaced
+								individuals all over the world.
 							</p>
 						</div>
 					</div>
